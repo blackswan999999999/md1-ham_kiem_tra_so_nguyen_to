@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #13aee3;
+            color: white;
+            text-align: center;
+        }
+
+        body > input {
+            width: 150px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<input type="number" id="s1" placeholder="Điền số cần kiểm tra">
+<button onclick="check_numb()">Kiểm tra</button>
+</body>
+<script>
+
+    function check_numb() {
+        let k = document.getElementById('s1').value;
+        if (k > 10000) {
+            alert(' Hãy nhập số bé hơn 10000');
+            return;
+            //    kết thúc chương trình khi giá trị nhập vào lớn hớn 10000
+        }
+        let check = true;
+        for (let i = 2; i < k; i++) {
+
+
+            if (k % i == 0) {
+                console.log('vào if với i==', i)
+                alert(' Số ' + k + '  không phải là số nguyên tố')
+                check = false;
+                break;
+
+            }
+        }
+        if (check == true) {
+            alert(' Số ' + k + '   là số nguyên tố')
+        }
+
+    }
+
+</script>
+</html>
