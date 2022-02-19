@@ -24,8 +24,8 @@
 
     function check_numb() {
         let k = document.getElementById('s1').value;
-        if (k > 10000) {
-            alert(' Hãy nhập số bé hơn 10000');
+        if (k > 10000 || k<2) {
+            alert(' Hãy nhập số bé hơn 10000 và lớn hơn 2');
             return;
             //    kết thúc chương trình khi giá trị nhập vào lớn hớn 10000
         }
